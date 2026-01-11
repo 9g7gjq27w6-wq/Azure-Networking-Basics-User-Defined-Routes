@@ -29,12 +29,12 @@ Enabled IP forwarding on the NIC of NVA, also enabled IP forwarding within the N
 
 ![image](images/Route1.png)
 ## Testing
-Connected to the appVM via SSH from my local PC and ran traceroute command for the dbVM '''traceroute 10.0.1.4''' and I could see the ICMP packet is being routed via the NVA to th  
+Connected to the appVM via SSH from my local PC and ran traceroute command for the dbVM `traceroute 10.0.1.4` and I could see the ICMP packet is being routed via the NVA to th  
 
 ![image2](image/"traceroute output.png")
 ## Learning
 - Multiple routing layers exist (at Azure level and at the OS level). The UDR bypasses the Azure default routes and uses whatever route we define
 - IP forwarding is disabled by default in Azure and Windows Server OS as a network security mechanism, as malicious users who have acess to a VM with IP forwarding enabled can create custom routes within the network for their advantage.
 - UDRs apply to outbound traffic only, it does not affect inbound traffic arriving at the subnet
-- Use of '''route print''' command in Windows Server OS 
+- Use of `route print1` command in Windows Server OS 
 
